@@ -5,9 +5,205 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+*:focus {
+  outline: none!important;
+}
+
+.icon{
+  color:#7c7c7c;
+  margin-left: auto;
+}
+
+
+.contenedor-select{
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 10rem;
+  padding: 2rem;
+  border: 1px solid black;
+}
+
+/*MULTI-SELECT CONTAINER*/
+.menu-options {
+  background-color: rgb(245, 245, 245);
+  width: 100%;
+  border-radius: 1rem;
+  padding: 0.5rem 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/*VISIBLE PART*/
+.header-menu {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0.2rem;
+  cursor: pointer;
+}
+
+.header-menu .choose-tag {
+  margin: 0;
+  padding: .5rem;
+  color: #7c7c7c;
+}
+
+.options-selected {
+  max-width: 80%;
+  position: relative;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+/* .option-selected-overflow{
+  color: #fff;
+  background-color:hotpink;
+  margin: 0 .2rem 0 .6rem;
+  border-radius: .8rem;
+  padding: .4rem .8rem;
+  position: relative;
+  display: inline-block;
+  top: 0;
+  right: 0;
+
+}  */
+
+.option-selected { 
+  margin: 0 .2rem 0 .2rem;
+  border-radius: .8rem;
+  padding: .4rem .8rem;
+  background-color:hotpink;
+  color: #fff;
+  display: inline-block;
+}
+
+/*DROPDOWN MENU WITH INPUTS*/
+.main-menu {
+  width: 100%;  
+  margin-top: 0.5rem;
+}
+
+/*SEARCH INPUT*/
+.container-search {
+  position: relative;
+  background-color: #fff;
+  border-radius: 1rem;
+  margin: 0 .5rem;
+}
+.input-search {
+  padding: 1rem;
+  border: none;
+  border-radius: 1rem;
+  width: 100%;
+}
+
+.input-search::placeholder{
+  color:#7c7c7c;
+  font-size: 15px;
+}
+
+.container-search ul {
+  list-style-type: none;
+  border-top: 1px solid #e1e1e1;
+  padding: 0;
+  margin-top: 0;
+
+}
+
+.container-search ul li{
+  border-bottom: 1px solid #e1e1e1;
+  
+}
+
+.container-search ul li:last-of-type{
+  border-bottom: none;
+}
+
+.container-search ul li button {
+  padding: 0.5rem 2rem;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  text-align: left;
+  cursor:pointer;
+
+}
+
+.search-icon {
+  position: absolute;
+  top:12px ;
+  right: 1rem;
+  color: #7c7c7c;
+}
+
+/*CHECKBOX*/
+.container-options {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem;
+  justify-content: space-between ;
+  
+}
+
+.option{
+  width: 50%;
+  padding-left: 0.2rem;
+}
+
+/* checkbox container*/
+.label-option {
+  display: block;
+  white-space:nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  color: rgb(8, 8, 116);
+  font-weight: 400;
+}
+
+/* Hide default checkbox */
+.label-option input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Custom checkbox*/
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  border-radius: .5rem;
+  border: 1px solid #d1d0d0;
+  background-color: #eee;
+}
+
+/* Hover color */
+.label-option:hover input ~ .checkmark {
+  background-color: rgb(255, 136, 195);
+  border: 1px solid rgb(247, 105, 176);
+}
+
+/* Checked color */
+.label-option input:checked ~ .checkmark {
+  background-color: hotpink;
 }
